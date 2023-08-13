@@ -1,4 +1,4 @@
-module com.almacen {
+module almacen.com.almacen {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -11,6 +11,6 @@ module com.almacen {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
 
-    opens com.almacen to javafx.fxml;
-    exports com.almacen;
+    opens Controller to javafx.fxml;
+    exports Controller;
 }

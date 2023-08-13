@@ -1,4 +1,4 @@
-package com.almacen;
+package Controller;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
