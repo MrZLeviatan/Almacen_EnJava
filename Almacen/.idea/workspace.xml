@@ -5,20 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adf0f0df-abb1-4baa-9d45-3042c705e5eb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/almacen/HelloApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/almacen/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/almacen/hello-view.fxml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Modelo/Almacen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Modelo/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Modelo/ClienteJuridico.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Modelo/ClienteNatural.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Modelo/DetalleVenta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Modelo/Producto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Modelo/ProductoEnvasado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Modelo/ProductoPerecedero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Modelo/ProductoRefigerado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Modelo/TipoPaisOrigen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Modelo/Venta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/HelloApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MrZLeviatan"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="f149fa66-a59c-46d8-b4fa-4aa4ab088fc3" />
+        <option name="url" value="https://github.com/MrZLeviatan/Almacen_EnJava.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -27,10 +56,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": -1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2Twwa5yvwf1V08TAKaCJBbjFB5Z" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -40,12 +68,18 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/MrZ Leviatan/Documents/Programacion/Aplicativos y Programas/JavaFx. Vrs.20/javafx-sdk-20.0.2/lib",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.5356322",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -57,7 +91,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1691967511294</updated>
-      <workItem from="1691967512341" duration="228000" />
+      <workItem from="1691967512341" duration="7018000" />
+      <workItem from="1691979182851" duration="659000" />
+      <workItem from="1691981625185" duration="247000" />
     </task>
     <servers />
   </component>
