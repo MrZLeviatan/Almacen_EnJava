@@ -1,4 +1,4 @@
-package Modelo;
+package Model;
 
 //EXTENS YA QUE CLIENTE NATURAL HEREDA DE CLIENTE
 public class ClienteNatural extends Cliente{

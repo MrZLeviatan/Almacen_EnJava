@@ -1,4 +1,4 @@
-package Modelo;
+package Model;
 
 //SE CREA EL ENUM PARA LOS TIPOS DE PAISES DE ORIGEN
 

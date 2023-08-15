@@ -1,4 +1,4 @@
-package Modelo;
+package Model;
 
 ////EXTENDS YA QUE PRODUCTO REFIGERADO HEREDA DE PRODUCTO
 public class ProductoRefigerado extends Producto {

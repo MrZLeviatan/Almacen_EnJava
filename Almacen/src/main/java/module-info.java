@@ -1,4 +1,4 @@
-module almacen.com.almacen {
+module com.almacen.almacen {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;

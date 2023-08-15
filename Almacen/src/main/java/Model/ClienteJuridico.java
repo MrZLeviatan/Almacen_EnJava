@@ -1,4 +1,4 @@
-package Modelo;
+package Model;
 
 //EXTENS YA QUE CLIENTE JURIDICO HEREDA DE CLIENTE
 

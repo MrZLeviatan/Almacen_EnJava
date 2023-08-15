@@ -1,4 +1,4 @@
-package Modelo;
+package Model;
 
 //EXTENDS YA QUE PRODUCTO ENVASADO HEREDA DE PRODUCTO
 public class ProductoEnvasado extends Producto{
