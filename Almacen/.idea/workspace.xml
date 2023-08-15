@@ -5,27 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e696b190-d238-416c-94ef-d96918072338" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/AlmacenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/ClienteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/AlmacenInstance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/View/Cliente.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Modelo/Almacen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Modelo/Cliente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Modelo/ClienteJuridico.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Modelo/ClienteNatural.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Modelo/DetalleVenta.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Modelo/Producto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Modelo/ProductoEnvasado.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Modelo/ProductoPerecedero.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Modelo/ProductoRefigerado.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Modelo/TipoPaisOrigen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Modelo/Venta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/AlmacenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/AlmacenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/AlmacenController.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/Almacen.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +37,6 @@
     </option>
   </component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: -1
 }</component>
   <component name="ProjectId" id="2Txcq56tAumcXc5PmZc2OLSNjIX" />
@@ -82,7 +66,7 @@
 }</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Controller.Main" />
+      <option name="MAIN_CLASS_NAME" value="View.Main" />
       <module name="Almacen" />
       <extension name="coverage">
         <pattern>
@@ -111,7 +95,10 @@
       <workItem from="1691988361777" duration="566000" />
       <workItem from="1692046536458" duration="507000" />
       <workItem from="1692048723238" duration="1422000" />
-      <workItem from="1692103771228" duration="658000" />
+      <workItem from="1692103771228" duration="1297000" />
+      <workItem from="1692105103731" duration="465000" />
+      <workItem from="1692105846717" duration="288000" />
+      <workItem from="1692106302156" duration="78000" />
     </task>
     <servers />
   </component>

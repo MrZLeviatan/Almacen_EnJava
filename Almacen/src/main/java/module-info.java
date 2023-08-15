@@ -11,6 +11,8 @@ module com.almacen.almacen {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
 
-    opens Controller to javafx.fxml;
+    opens View to javafx.fxml;
+    exports View;
     exports Controller;
+    opens Controller to javafx.fxml;
 }
