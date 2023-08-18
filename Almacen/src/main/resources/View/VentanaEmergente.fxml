@@ -3,32 +3,52 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="225.0" prefWidth="401.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.VentanaEmergenteController">
+<AnchorPane prefHeight="225.0" prefWidth="401.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.VentanaEmergenteController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7f4e9" height="225.0" stroke="BLACK" strokeType="INSIDE" width="415.0" />
-      <Label alignment="CENTER" layoutX="24.0" layoutY="29.0" prefHeight="79.0" prefWidth="367.0" text="DESEA SALIR DEL PROGRAMA?" textAlignment="CENTER" textFill="#d75353">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="250.0" layoutX="-13.0" layoutY="-17.0" stroke="BLACK" strokeType="INSIDE" width="440.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.5402684563758389">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7f4e9" height="218.0" layoutX="9.0" layoutY="8.0" stroke="BLACK" strokeType="INSIDE" width="409.0" />
+      <Label alignment="CENTER" layoutX="24.0" layoutY="29.0" prefHeight="79.0" prefWidth="367.0" text="Desea salir del programa?" textAlignment="CENTER" textFill="#ae2e2e">
          <font>
-            <Font name="Felix Titling" size="24.0" />
+            <Font name="SansSerif Regular" size="30.0" />
          </font>
       </Label>
-      <Button fx:id="botonAceptar" alignment="CENTER" layoutX="24.0" layoutY="135.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="165.0" styleClass="botonesVentanaEmergente" stylesheets="@../Style/HojaEstilo.css" text="ACEPTAR">
+      <Button fx:id="botonAceptar" alignment="CENTER" layoutX="24.0" layoutY="135.0" mnemonicParsing="false" onMouseClicked="#aceptarCerrar" prefHeight="57.0" prefWidth="165.0" styleClass="botonesVentanaEmergente" stylesheets="@../Style/HojaEstilo.css" text="ACEPTAR" textFill="WHITE">
          <font>
-            <Font name="Felix Titling" size="13.0" />
+            <Font name="SansSerif Bold" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="botonCancelar" alignment="CENTER" layoutX="226.0" layoutY="135.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="165.0" styleClass="botonCancelar" stylesheets="@../Style/HojaEstilo.css" text="CANCELAR">
+      <Button fx:id="botonCancelar" alignment="CENTER" layoutX="226.0" layoutY="135.0" mnemonicParsing="false" onMouseClicked="#cancelarCerrar" prefHeight="57.0" prefWidth="165.0" styleClass="botonCancelar" stylesheets="@../Style/HojaEstilo.css" text="CANCELAR" textFill="WHITE">
          <font>
-            <Font name="Felix Titling" size="13.0" />
+            <Font name="SansSerif Bold" size="16.0" />
          </font>
       </Button>
-      <Label alignment="CENTER" layoutX="371.0" layoutY="11.0" prefHeight="35.0" prefWidth="40.0" styleClass="x" stylesheets="@../Style/HojaEstilo.css" text="X" fx:id="x">
-         <font>
-            <Font name="Arial Black" size="24.0" />
-         </font>
-      </Label>
    </children>
 </AnchorPane>

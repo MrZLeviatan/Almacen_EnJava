@@ -63,3 +63,16 @@
     -fx-background-color: #C109097A;
     -fx-background-radius:10 ;
 }
+
+.botonSeleccion{
+    -fx-background-color:  #BABABA;
+    -fx-background-radius: 10;
+}
+.botonSeleccion:hover{
+    -fx-background-color:  #736868;
+    -fx-background-radius: 10;
+}
+.botonSeleccion:pressed {
+    -fx-background-color: #463C3C;
+    -fx-background-radius: 10;
+}

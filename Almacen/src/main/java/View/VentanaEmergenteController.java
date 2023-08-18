@@ -1,9 +1,11 @@
-package Controller;
+package View;
 
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import javax.swing.*;
@@ -21,15 +23,16 @@ public class VentanaEmergenteController {
     @FXML
     private Label x;
 
-    @FXML
-    void aceptarCerrar (ActionEvent event) throws IOException {
+
+
+    public void aceptarCerrar(javafx.scene.input.MouseEvent mouseEvent) {
         System.exit(0);
+
     }
 
-    void cancelarCerrar (ActionEvent event) throws IOException{
-        Node source = (Node) event.getSource();
-        Stage stage2= (Stage) source.getScene().getWindow();
+    public void cancelarCerrar(MouseEvent mouseEvent) {
+        Node source = (Node) mouseEvent.getSource();
+        Stage stage2 = (Stage) source.getScene().getWindow();
         stage2.close();
     }
-
 }

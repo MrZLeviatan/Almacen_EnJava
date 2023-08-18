@@ -5,12 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e696b190-d238-416c-94ef-d96918072338" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/VentanaEmergenteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/View/VentanaEmergente.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/View/ClienteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/View/ProductoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/View/VentaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/View/Producto.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/View/Venta.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/AlmacenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/AlmacenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/AlmacenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/AlmacenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/VentanaEmergenteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/VentanaEmergenteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Style/HojaEstilo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Style/HojaEstilo.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/View/Almacen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/Almacen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/Cliente.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/Cliente.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/VentanaEmergente.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/VentanaEmergente.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +62,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "Nicolas",
+    "last_directory_selection": "C:/Users/MrZ Leviatan/Documents/Programacion/Trabajos Github/AlmacenEnGithub/Almacen_EnJava/Almacen/src/main/java/View",
     "last_opened_file_path": "C:/Users/MrZ Leviatan/Documents/Programacion/Aplicativos y Programas/JavaFx. Vrs.20/javafx-sdk-20.0.2/lib",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -71,14 +80,17 @@
       <recent name="C:\Users\MrZ Leviatan\Documents\Programacion\Trabajos Github\AlmacenEnGithub\Almacen_EnJava\Almacen\src\main\resources\Image" />
       <recent name="C:\Users\MrZ Leviatan\Documents\Programacion\Trabajos Github\AlmacenEnGithub\Almacen_EnJava\Almacen\src\main\resources\View" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="View" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="View.Main" />
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="View.App" />
       <module name="Almacen" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Controller.*" />
+          <option name="PATTERN" value="View.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -106,7 +118,7 @@
       <workItem from="1692103771228" duration="1297000" />
       <workItem from="1692105103731" duration="465000" />
       <workItem from="1692105846717" duration="288000" />
-      <workItem from="1692106302156" duration="14451000" />
+      <workItem from="1692106302156" duration="34932000" />
     </task>
     <servers />
   </component>
