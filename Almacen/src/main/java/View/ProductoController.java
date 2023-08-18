@@ -1,5 +1,6 @@
 package View;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -143,4 +144,48 @@ public class ProductoController {
         stage2.hide();
         stage.show();
     }
+
+    public void ocultarTextoPerecederos(ActionEvent actionEvent) {
+
+        datePickerFechaVencimiento.setDisable(false);
+        textFieldCodigoAprobacion.setDisable(true);
+        textFieldTemperatura.setDisable(true);
+        datePickerFechaEnvasado.setDisable(true);
+        textFieldPesoEnvasado.setDisable(true);
+        menuBotonPaisOrigen.setDisable(true);
+
+        textFieldCodigoAprobacion.setText("");
+        textFieldTemperatura.setText("");
+        datePickerFechaEnvasado.getEditor().clear();
+        textFieldPesoEnvasado.setText("");
+
+    }
+    public void ocultarTextoRefigerados(ActionEvent actionEvent) {
+
+        datePickerFechaVencimiento.setDisable(true);
+        textFieldCodigoAprobacion.setDisable(false);
+        textFieldTemperatura.setDisable(false);
+        datePickerFechaEnvasado.setDisable(true);
+        textFieldPesoEnvasado.setDisable(true);
+        menuBotonPaisOrigen.setDisable(true);
+
+        datePickerFechaVencimiento.getEditor().clear();
+        datePickerFechaEnvasado.getEditor().clear();
+        textFieldPesoEnvasado.setText("");
+    }
+
+    public void ocultarTextoEnvasados(ActionEvent actionEvent) {
+
+        datePickerFechaVencimiento.setDisable(true);
+        textFieldCodigoAprobacion.setDisable(true);
+        textFieldTemperatura.setDisable(true);
+        datePickerFechaEnvasado.setDisable(false);
+        textFieldPesoEnvasado.setDisable(false);
+        menuBotonPaisOrigen.setDisable(false);
+
+        datePickerFechaVencimiento.getEditor().clear();
+        textFieldCodigoAprobacion.setText("");
+        textFieldTemperatura.setText("");
+    }
+
 }

@@ -5,20 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e696b190-d238-416c-94ef-d96918072338" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/View/ClienteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/View/ProductoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/View/VentaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/View/Producto.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/View/Venta.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/AlmacenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/AlmacenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/VentanaEmergenteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/VentanaEmergenteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Style/HojaEstilo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Style/HojaEstilo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/Almacen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/Almacen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/ClienteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View/ProductoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/ProductoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/View/Cliente.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/Cliente.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/VentanaEmergente.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/VentanaEmergente.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/Producto.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/Producto.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +60,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.5356322",
     "vue.rearranger.settings.migration": "true"
@@ -118,7 +109,7 @@
       <workItem from="1692103771228" duration="1297000" />
       <workItem from="1692105103731" duration="465000" />
       <workItem from="1692105846717" duration="288000" />
-      <workItem from="1692106302156" duration="34932000" />
+      <workItem from="1692106302156" duration="39038000" />
     </task>
     <servers />
   </component>

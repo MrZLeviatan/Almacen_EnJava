@@ -1,7 +1,9 @@
 package View;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -11,10 +13,13 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.time.LocalDate;
+import java.util.ResourceBundle;
 
 import static javafx.stage.StageStyle.UNDECORATED;
 
-public class ClienteController {
+public class ClienteController  {
 
     @FXML
     private Button botonActualizar;
@@ -85,6 +90,13 @@ public class ClienteController {
     @FXML
     private Label x;
 
+    @FXML
+    private MenuItem menuBotonJuridico;
+
+    @FXML
+    private MenuItem menuBotonNatural;
+
+
 
     public void labCerrar(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("VentanaEmergente.fxml"));
@@ -108,6 +120,31 @@ public class ClienteController {
         stage2.hide();
         stage.show();
     }
+
+    /*CON ESTE EVENTO, AL PRESIONAR EN EL MENU DE PERSONA JURIDICA, ACTIVA LA CASILLA
+     EL TEXTFIELD DE NIT, MIENTRAS QUE LOS OTROS TEXFIELD SE BLOQUEAN Y BORRA SU
+     CONTENIDO
+    */
+    public void ocultarTextoJuridico(ActionEvent actionEvent) {
+
+        textFieldEmail.setDisable(true);
+        datePickerNacimiento.setDisable(true);
+        textFieldNit.setDisable(false);
+
+        textFieldEmail.setText("");
+        datePickerNacimiento.getEditor().clear();
+    }
+
+    public void ocultarTextoNatural (ActionEvent actionEvent){
+
+        textFieldEmail.setDisable(false);
+        datePickerNacimiento.setDisable(false);
+        textFieldNit.setDisable(true);
+
+        textFieldNit.setText("");
+    }
+
+
 }
 
 

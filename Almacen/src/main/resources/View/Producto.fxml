@@ -91,14 +91,14 @@
                   <Font name="SansSerif Bold" size="13.0" />
                </font>
             </Label>
-            <TextField fx:id="textFieldCodigoAprobacion" layoutX="168.0" layoutY="155.0" prefHeight="27.0" prefWidth="127.0" promptText="Codigo:" />
-            <DatePicker fx:id="datePickerFechaVencimiento" editable="false" layoutX="18.0" layoutY="155.0" prefHeight="27.0" prefWidth="127.0" promptText="Fecha De Venc..." />
+            <TextField fx:id="textFieldCodigoAprobacion" disable="true" layoutX="168.0" layoutY="155.0" prefHeight="27.0" prefWidth="127.0" promptText="Codigo:" />
+            <DatePicker fx:id="datePickerFechaVencimiento" disable="true" editable="false" layoutX="18.0" layoutY="155.0" prefHeight="27.0" prefWidth="127.0" promptText="Fecha De Venc..." />
             <Label layoutX="318.0" layoutY="132.0" text="Temperatura:" textFill="#3d7579">
                <font>
                   <Font name="SansSerif Bold" size="13.0" />
                </font>
             </Label>
-            <TextField fx:id="textFieldTemperatura" layoutX="318.0" layoutY="155.0" prefHeight="27.0" prefWidth="127.0" promptText="Temperatura:">
+            <TextField fx:id="textFieldTemperatura" disable="true" layoutX="318.0" layoutY="155.0" prefHeight="27.0" prefWidth="127.0" promptText="Temperatura:">
                <font>
                   <Font name="SansSerif Regular" size="13.0" />
                </font>
@@ -110,9 +110,9 @@
             </Label>
             <MenuButton fx:id="menuBotonTipoDeProducto" layoutX="144.0" layoutY="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="117.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css">
                <items>
-                  <MenuItem fx:id="menuBotonProdPerecedero" mnemonicParsing="false" text="Productos Perecederos" />
-                  <MenuItem fx:id="menuBotonProdRefigerado" mnemonicParsing="false" text="Productos Refrigerados" />
-                  <MenuItem fx:id="menuBotonProdEnvasado" mnemonicParsing="false" text="Productos Envasados " />
+                  <MenuItem fx:id="menuBotonProdPerecedero" mnemonicParsing="false" onAction="#ocultarTextoPerecederos" text="Productos Perecederos" />
+                  <MenuItem fx:id="menuBotonProdRefigerado" mnemonicParsing="false" onAction="#ocultarTextoRefigerados" text="Productos Refrigerados" />
+                  <MenuItem fx:id="menuBotonProdEnvasado" mnemonicParsing="false" onAction="#ocultarTextoEnvasados" text="Productos Envasados " />
                </items>
                <font>
                   <Font name="SansSerif Regular" size="13.0" />
@@ -123,13 +123,13 @@
                   <Font name="SansSerif Bold" size="14.0" />
                </font>
             </Label>
-            <DatePicker fx:id="datePickerFechaEnvasado" layoutX="468.0" layoutY="155.0" prefHeight="27.0" prefWidth="127.0" promptText="Fecha De Enva..." />
+            <DatePicker fx:id="datePickerFechaEnvasado" disable="true" editable="false" layoutX="468.0" layoutY="155.0" prefHeight="27.0" prefWidth="127.0" promptText="Fecha De Enva..." />
             <Label layoutX="18.0" layoutY="206.0" text="Peso Envasado:" textFill="#3d7579">
                <font>
                   <Font name="SansSerif Bold" size="13.0" />
                </font>
             </Label>
-            <TextField fx:id="textFieldPesoEnvasado" layoutX="18.0" layoutY="229.0" prefHeight="27.0" prefWidth="127.0" promptText="Peso Envasado:">
+            <TextField fx:id="textFieldPesoEnvasado" disable="true" layoutX="18.0" layoutY="229.0" prefHeight="27.0" prefWidth="127.0" promptText="Peso Envasado:">
                <font>
                   <Font name="SansSerif Regular" size="13.0" />
                </font>
@@ -139,7 +139,7 @@
                   <Font name="SansSerif Bold" size="13.0" />
                </font>
             </Label>
-            <MenuButton fx:id="menuBotonPaisOrigen" alignment="CENTER" layoutX="168.0" layoutY="229.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="127.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css">
+            <MenuButton fx:id="menuBotonPaisOrigen" alignment="CENTER" disable="true" layoutX="168.0" layoutY="229.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="127.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css">
               <items>
                 <MenuItem fx:id="menuBotonColombia" mnemonicParsing="false" text="Colombia" />
                 <MenuItem fx:id="menuBotonArgentina" mnemonicParsing="false" text="Argentina" />

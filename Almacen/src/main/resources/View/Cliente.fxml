@@ -92,13 +92,13 @@
                </font>
             </Label>
             <TextField fx:id="textFieldTelefono" layoutX="18.0" layoutY="155.0" prefHeight="27.0" prefWidth="127.0" promptText="Telefono:" />
-            <DatePicker fx:id="datePickerNacimiento" editable="false" layoutX="168.0" layoutY="155.0" prefHeight="27.0" prefWidth="127.0" promptText="Fecha:" />
+            <DatePicker fx:id="datePickerNacimiento" disable="true" editable="false" layoutX="168.0" layoutY="155.0" prefHeight="27.0" prefWidth="127.0" promptText="Fecha:" />
             <Label layoutX="318.0" layoutY="132.0" text="Email:" textFill="#3d7579">
                <font>
                   <Font name="SansSerif Bold" size="13.0" />
                </font>
             </Label>
-            <TextField fx:id="textFieldEmail" layoutX="318.0" layoutY="155.0" prefHeight="27.0" prefWidth="127.0" promptText="Email">
+            <TextField fx:id="textFieldEmail" disable="true" layoutX="318.0" layoutY="155.0" prefHeight="27.0" prefWidth="127.0" promptText="Email">
                <font>
                   <Font name="SansSerif Regular" size="13.0" />
                </font>
@@ -108,15 +108,15 @@
                   <Font name="SansSerif Bold" size="13.0" />
                </font>
             </Label>
-            <TextField fx:id="textFieldNit" layoutX="468.0" layoutY="155.0" prefHeight="27.0" prefWidth="127.0" promptText="Nit">
+            <TextField fx:id="textFieldNit" disable="true" layoutX="468.0" layoutY="155.0" prefHeight="27.0" prefWidth="127.0" promptText="Nit">
                <font>
                   <Font name="SansSerif Regular" size="13.0" />
                </font>
             </TextField>
             <MenuButton fx:id="comboTipoPersona" layoutX="144.0" layoutY="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="117.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css">
               <items>
-                <MenuItem mnemonicParsing="false" text="Juridico" />
-                <MenuItem mnemonicParsing="false" text="Natural" />
+                <MenuItem fx:id="menuBotonJuridico" mnemonicParsing="false" onAction="#ocultarTextoJuridico" text="Juridico" />
+                <MenuItem fx:id="menuBotonNatural" mnemonicParsing="false" onAction="#ocultarTextoNatural" text="Natural" />
               </items>
                <font>
                   <Font name="SansSerif Regular" size="13.0" />
