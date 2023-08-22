@@ -163,7 +163,7 @@
                   <TableColumn fx:id="columnaCodigo" prefWidth="53.0" text="Codigo" />
                   <TableColumn fx:id="columnaNombre" prefWidth="65.0" text="Nombre" />
                   <TableColumn fx:id="columnaValorUnitario" prefWidth="82.0" text="Valor Unitario" />
-                  <TableColumn fx:id="valorCantidad" prefWidth="68.0" text="Cantidad" />
+                  <TableColumn fx:id="columnaCantidad" prefWidth="68.0" text="Cantidad" />
                   <TableColumn fx:id="columnaFechaVencimiento" prefWidth="94.0" text="Fecha De Vencimiento" />
                   <TableColumn fx:id="columnaCodigoAprob" prefWidth="84.0" text="Codigo Aprobacion" />
                   <TableColumn fx:id="columnaTemperatura" prefWidth="73.0" text="Temperatura" />

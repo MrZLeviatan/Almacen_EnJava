@@ -1,16 +1,18 @@
 package Model;
 
+import java.time.LocalDate;
+
 //EXTENDS YA QUE PRODUCTO ENVASADO HEREDA DE PRODUCTO
 public class ProductoEnvasado extends Producto{
 
     //SE CREAN LAS VARIABLES DE PRODUCTO ENVASADO; EL TIPOPAISORIGEN SE TRAE DEL ENUM DEL MISMO NOMBRE
-       private int fechaEnvasado;
+       private LocalDate fechaEnvasado;
        private float peso;
        private TipoPaisOrigen tipoPaisOrigen;
 
     //SE CREA EL CONSTRUCTOR DE PRODUCTO ENVASADO; SE TRAE DE IGUALMANERA EL CONSTRUCTOR HEREDADO DE PRODUCTO
 
-        public ProductoEnvasado(int id, int cantidad, int valorUnitario, String nombre, String descripcion, int fechaEnvasado, float peso, TipoPaisOrigen tipoPaisOrigen) {
+        public ProductoEnvasado(int id, int cantidad, int valorUnitario, String nombre, String descripcion, LocalDate fechaEnvasado, float peso, TipoPaisOrigen tipoPaisOrigen) {
             super(id, cantidad, valorUnitario, nombre, descripcion);
             this.fechaEnvasado = fechaEnvasado;
             this.peso = peso;
@@ -19,7 +21,7 @@ public class ProductoEnvasado extends Producto{
 
     //SE CREA EL GET Y SET DEL PRODUCTO ENVASADO
 
-        public int getFechaEnvasado() {
+        public LocalDate getFechaEnvasado() {
             return fechaEnvasado;
         }
         public float getPeso() {
@@ -30,7 +32,7 @@ public class ProductoEnvasado extends Producto{
         }
 
         //-----------
-        public void setFechaEnvasado(int fechaEnvasado) {
+        public void setFechaEnvasado(LocalDate fechaEnvasado) {
             this.fechaEnvasado = fechaEnvasado;
         }
         public void setPeso(float peso) {

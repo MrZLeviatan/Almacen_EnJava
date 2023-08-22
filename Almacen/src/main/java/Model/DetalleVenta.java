@@ -1,18 +1,21 @@
 package Model;
 
+import java.util.ArrayList;
+
 public class DetalleVenta {
 
     //SE CREAN LAS VARIABLES DE DETALLE DE VENTA; SE LLAMA PRODUCTO
         private int cantidadPro;
         private float subTotal;
-        private Producto producto;
+        private int IdProduco;
+
 
     //SE CREAN LOS CONSTRUCTORES DE DETALLE DE VENTA
 
-        public DetalleVenta(int cantidadPro, float subTotal, Producto producto) {
+        public DetalleVenta(int cantidadPro, float subTotal, int idProduco) {
             this.cantidadPro = cantidadPro;
             this.subTotal = subTotal;
-            this.producto = producto;
+            this.IdProduco = idProduco;
         }
 
     //SE CREAN LOS GET Y SET DE DETALLE DE VENTA
@@ -23,9 +26,7 @@ public class DetalleVenta {
         public float getSubTotal() {
             return subTotal;
         }
-        public Producto getProducto() {
-            return producto;
-        }
+        public int getIdProduco() {return IdProduco;}
 
         public void setCantidadPro(int cantidadPro) {
             this.cantidadPro = cantidadPro;
@@ -33,7 +34,7 @@ public class DetalleVenta {
         public void setSubTotal(float subTotal) {
             this.subTotal = subTotal;
         }
-        public void setProducto(Producto producto) {
-            this.producto = producto;
-        }
+
+         public void setIdProduco(int idProduco) {IdProduco = idProduco;
+    }
 }

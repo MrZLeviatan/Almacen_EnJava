@@ -1,81 +1,68 @@
 package Model;
 
 
-import javafx.collections.ObservableList;
-
 import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class Almacen   {
 
-    ArrayList<ClienteNatural> clienteNatural;
+    private ArrayList<Cliente> listacliente;
+    private ArrayList<Producto>listaproducto;
+    private ArrayList<Venta>listaVenta;
 
-    ArrayList<ClienteJuridico> clienteJuridicos;
-
-    List<Producto>producto;
-    List<Venta>venta;
 
     public Almacen(){
 
+        listaproducto= new ArrayList<>();
+        listaVenta= new ArrayList<>();
+        listacliente = new ArrayList<>();
+
     }
 
-    public ArrayList<ClienteNatural> getClienteNatural() {
-        return clienteNatural;
-    }
-    public ArrayList<ClienteJuridico> getClienteJuridicos(){
-        return  clienteJuridicos;
+    public ArrayList<Cliente> getCliente() {
+        return listacliente;
     }
 
-    public List<Producto> getProducto() {
-        return producto;
+    public ArrayList<Producto> getProducto() {
+        return listaproducto;
     }
 
-    public List<Venta> getVenta() {
-        return venta;
+    public ArrayList<Venta> getVenta() {
+        return listaVenta;
     }
 
     //CREAR METODO PARA BUSCAR VARIABLES
 
-    /*
-    public Cliente buscarClienteNatural(int identificacion){
-        return clienteNatural.stream().filter(cliente -> cliente.getIdentificacion()==identificacion).findFirst().get();
+
+    public Cliente buscarCliente(int identificacion){
+        return listacliente.stream().filter(cliente -> cliente.getIdentifiacion()==identificacion).findFirst().get();
     }
-*/
+
     public Producto buscarProducto(int codigo){
-        return producto.stream().filter(producto -> producto.getId()== codigo).findFirst().get();
+        return listaproducto.stream().filter(producto -> producto.getId()== codigo).findFirst().get();
 
     }
+
 
     public Venta buscarVenta (int codigo){
-        return venta.stream().filter(venta -> venta.getCodigo()== codigo).findFirst().get();
+        return listaVenta.stream().filter(venta -> venta.getCodigo()== codigo).findFirst().get();
 
     }
 
     //CREAR METODOS PARA ELIMINAR VARIABLES
 
-    public void eliminarCliente (ClienteNatural persona){clienteNatural.remove(persona);}
+    public void eliminarCliente (Cliente persona){listacliente.remove(persona);}
 
-    public void eliminarProducto (Producto bloque){producto.remove(bloque);}
+    public void eliminarProducto (Producto bloque){listaproducto.remove(bloque);}
 
-    public void eliminarVenta (Venta persona){ venta.remove(persona);}
+    public void eliminarVenta (Venta persona){ listaVenta.remove(persona);}
 
 
     //CREAR METODOS PARA AGREGAR VARIABLES
+    public void agregarCliente (Cliente cliente){listacliente.add(cliente);}
 
-    public void agregarPersonaNatural (ClienteNatural persona){
-        clienteNatural.add(persona);
-        System.out.println("registro natural");
-    }
+    public void agregarProducto (Producto persona){listaproducto.add(persona);}
 
-    public void agregarPersonaJuridica (ClienteJuridico persona){clienteJuridicos.add(persona);
-        System.out.println("registro juridico");
-    }
-
-
-    public void agregarProducto (Producto persona){producto.add(persona);}
-
-    public void agregarVenta (Venta persona){ venta.add(persona);}
+    public void agregarVenta (Venta persona){ listaVenta.add(persona);}
 
 
 }

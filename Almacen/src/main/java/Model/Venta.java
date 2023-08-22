@@ -1,16 +1,22 @@
 package Model;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+
 public class Venta {
 
     //SE CREAN LAS VARIABLES DE VENTA, SE LLAMA A DETTALES DE VENTA
 
-        private int codigo, fecha;
+        private int codigo;
+
+        private LocalDate fecha;
         private float total, iva;
-        private DetalleVenta detalleVenta;
+        private ArrayList<DetalleVenta> detalleVenta;
+
 
     //SE GENERA EL CONSTRUCTOR DE VENTA
 
-        public Venta(int codigo, int fecha, float total, float iva, DetalleVenta detalleVenta) {
+        public Venta(int codigo, LocalDate fecha, float total, float iva, ArrayList<DetalleVenta> detalleVenta) {
                 this.codigo = codigo;
                 this.fecha = fecha;
                 this.total = total;
@@ -23,7 +29,7 @@ public class Venta {
         public int getCodigo() {
                 return codigo;
         }
-        public int getFecha() {
+        public LocalDate getFecha() {
                 return fecha;
         }
         public float getTotal() {
@@ -32,7 +38,7 @@ public class Venta {
         public float getIva() {
                 return iva;
         }
-        public DetalleVenta getDetalleVenta() {
+        public ArrayList<DetalleVenta> getDetalleVenta() {
                 return detalleVenta;
         }
 
@@ -41,7 +47,7 @@ public class Venta {
         public void setCodigo(int codigo) {
                 this.codigo = codigo;
         }
-        public void setFecha(int fecha) {
+        public void setFecha(LocalDate fecha) {
                 this.fecha = fecha;
         }
         public void setTotal(float total) {
@@ -50,7 +56,7 @@ public class Venta {
         public void setIva(float iva) {
                 this.iva = iva;
         }
-        public void setDetalleVenta(DetalleVenta detalleVenta) {
+        public void setDetalleVenta(ArrayList<DetalleVenta> detalleVenta) {
                 this.detalleVenta = detalleVenta;
         }
 }

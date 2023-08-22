@@ -18,7 +18,7 @@
 
 <AnchorPane prefHeight="430.0" prefWidth="728.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.ClienteController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f9f6ea" height="580.0" layoutX="-48.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="953.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f9f6ea" height="576.0" layoutX="-48.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="953.0" />
       <Label alignment="CENTER" layoutX="861.0" layoutY="1.0" onMouseClicked="#labCerrar" prefHeight="35.0" prefWidth="40.0" styleClass="x" stylesheets="@../Style/HojaEstilo.css" text="X" fx:id="x">
          <font>
             <Font name="Arial Black" size="24.0" />
@@ -157,19 +157,20 @@
             </Button>
          </children>
       </Pane>
-      <Pane layoutX="219.0" layoutY="331.0" prefHeight="232.0" prefWidth="671.0">
+      <Pane layoutX="219.0" layoutY="329.0" prefHeight="232.0" prefWidth="671.0">
          <children>
-            <TableView fx:id="tablaClienteNatural" layoutX="39.0" layoutY="16.0" prefHeight="200.0" prefWidth="560.0">
+            <TableView fx:id="tablaClienteNatural" layoutX="23.0" layoutY="16.0" prefHeight="200.0" prefWidth="626.0">
               <columns>
-                <TableColumn prefWidth="559.0" text="Personas Natural">
+                <TableColumn prefWidth="595.0" text="Personas Natural">
                      <columns>
                       <TableColumn fx:id="columnaNombre" prefWidth="75.0" text="Nombre" />
                         <TableColumn fx:id="columnaApellido" prefWidth="75.0" text="Apellido" />
                         <TableColumn fx:id="columnaIdentificacion" prefWidth="75.0" text="ID" />
                         <TableColumn fx:id="columnaTelefono" prefWidth="75.0" text="Telefono" />
-                        <TableColumn fx:id="columnaDireccion" prefWidth="75.0" text="Direccion" />
-                        <TableColumn fx:id="columnaFechaNacimiento" prefWidth="108.0" text="Fecha Nacimiento" />
-                        <TableColumn fx:id="columnaEmail" prefWidth="76.0" text="Email" />
+                        <TableColumn fx:id="columnaDireccion" prefWidth="91.0" text="Direccion" />
+                        <TableColumn fx:id="columnaFechaNacimiento" prefWidth="87.0" text="Fecha Nacimiento" />
+                        <TableColumn fx:id="columnaEmail" prefWidth="75.0" text="Email" />
+                        <TableColumn fx:id="columnaNit" prefWidth="72.0" text="NIT" />
                      </columns>
                   </TableColumn>
               </columns>

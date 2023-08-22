@@ -15,7 +15,7 @@ module com.almacen.almacen {
     exports View;
     exports Controller;
     opens Controller to javafx.fxml;
-
+    opens Model;
 
 
 

@@ -5,18 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e696b190-d238-416c-94ef-d96918072338" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/View/AlmacenInstance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/View/DetallesVentasController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/View/DetallesVentas.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/CocoValve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/CocoValve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/CocoValve.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/Almacen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Almacen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/AlmacenInstance.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/ClienteJuridico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/ClienteJuridico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/ClienteNatural.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/ClienteNatural.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/DetalleVenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/DetalleVenta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Producto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/AlmacenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/AlmacenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/ProductoEnvasado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/ProductoEnvasado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/ProductoPerecedero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/ProductoPerecedero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Venta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Venta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View/AlmacenInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/AlmacenInstance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/View/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/ClienteController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/View/ProductoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/ProductoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/View/VentaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/VentaController.java" afterDir="false" />
@@ -69,7 +68,7 @@
     "git-widget-placeholder": "Nicolas",
     "jdk.selected.JAVA_MODULE": "17",
     "last_directory_selection": "C:/Users/MrZ Leviatan/Documents/Programacion/Trabajos Github/AlmacenEnGithub/Almacen_EnJava/Almacen/src/main/java/View",
-    "last_opened_file_path": "C:/Users/MrZ Leviatan/Documents/Programacion/Trabajos y Talleres/Revision/tabla2",
+    "last_opened_file_path": "C:/Users/MrZ Leviatan/Documents/Programacion/Trabajos y Talleres/Revision/Nueva carpeta/Taller1.3",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -126,7 +125,7 @@
       <workItem from="1692105103731" duration="465000" />
       <workItem from="1692105846717" duration="288000" />
       <workItem from="1692106302156" duration="92382000" />
-      <workItem from="1692622402608" duration="27939000" />
+      <workItem from="1692622402608" duration="48877000" />
     </task>
     <servers />
   </component>

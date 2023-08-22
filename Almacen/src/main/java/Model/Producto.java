@@ -5,7 +5,7 @@ public  class Producto {
     //SE CREAN LAS VARIBLES PARA LA CLASE PRODUCTO
 
         private int id, cantidad, valorUnitario;
-        private String nombre, descripcion;
+        private String nombreProducto, descripcion;
 
 
     //SE GENERA EL CONSTRUCTOR CON LAS VARIABLES DEL PRODUCTO
@@ -14,7 +14,7 @@ public  class Producto {
             this.id = id;
             this.cantidad = cantidad;
             this.valorUnitario = valorUnitario;
-            this.nombre = nombre;
+            this.nombreProducto = nombre;
             this.descripcion = descripcion;
         }
 
@@ -29,8 +29,8 @@ public  class Producto {
         public int getValorUnitario() {
             return valorUnitario;
         }
-        public String getNombre() {
-            return nombre;
+        public String getNombreProducto() {
+            return nombreProducto;
         }
         public String getDescripcion() {
             return descripcion;
@@ -47,8 +47,8 @@ public  class Producto {
         public void setValorUnitario(int valorUnitario) {
             this.valorUnitario = valorUnitario;
         }
-        public void setNombre(String nombre) {
-            this.nombre = nombre;
+        public void setNombreProducto(String nombreProducto) {
+            this.nombreProducto = nombreProducto;
         }
         public void setDescripcion(String descripcion) {
             this.descripcion = descripcion;

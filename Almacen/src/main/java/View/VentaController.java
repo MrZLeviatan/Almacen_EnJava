@@ -1,7 +1,9 @@
 package View;
 
-import Model.Cliente;
-import Model.ClienteNatural;
+import Model.*;
+
+import static View.AlmacenInstance.INSTANCE;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -12,18 +14,25 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
+import static View.AlmacenInstance.INSTANCE;
 import static javafx.stage.StageStyle.UNDECORATED;
 
-public class VentaController implements Initializable {
+public class VentaController  {
+
+    private final ObservableList<Venta> observableVenta =FXCollections.observableArrayList();
 
     @FXML
     private Button botonActualizar;
@@ -38,31 +47,27 @@ public class VentaController implements Initializable {
     private Button botonRegresar;
 
     @FXML
-    private TableColumn<?, ?> columnaCantidad;
+    private TableColumn<Venta, Integer> columnaCantidad;
 
     @FXML
-    private TableColumn<?, ?> columnaCliente;
+    private TableColumn<Venta, Integer> columndaCliente;
 
     @FXML
-    private TableColumn<?, ?> columnaCodigo;
+    private TableColumn<Venta, Integer> columnaCodigo;
 
     @FXML
-    private TableColumn<?, ?> columnaFecha;
+    private TableColumn<Venta, LocalDate> columnaFecha;
+
 
     @FXML
-    private TableColumn<?, ?> columnaIVA;
+    private TableColumn<Venta, Integer> columnaProducto;
+
 
     @FXML
-    private TableColumn<?, ?> columnaProducto;
+    private TableColumn<Venta,Float> columnaTotal;
 
     @FXML
-    private TableColumn<?, ?> columnaSubTotal;
-
-    @FXML
-    private TableColumn<?, ?> columnaTotal;
-
-    @FXML
-    private TableView<?> tablaVenta;
+    private TableView<Venta> tablaVenta;
 
     @FXML
     private TextField textFieldCantidad;
@@ -95,12 +100,27 @@ public class VentaController implements Initializable {
 
 
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    @FXML
+    public void initialize() {
 
+        observableVenta.addAll(INSTANCE.getAlmacen().getVenta());
+        tablaVenta.setItems(observableVenta.sorted());
 
+        llenarTabla(INSTANCE.getAlmacen().getVenta());
+
+        columnaCodigo.setCellValueFactory(new PropertyValueFactory<Venta, Integer>("codigo"));
+        columnaFecha.setCellValueFactory(new PropertyValueFactory<Venta,LocalDate>("fecha"));
+        columndaCliente.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+        columnaProducto.setCellValueFactory(new PropertyValueFactory<>("nombreProducto"));
+        columnaTotal.setCellValueFactory(new PropertyValueFactory<>("total"));
 
     }
+
+    private void llenarTabla(ArrayList<Venta> personas) {
+        tablaVenta.setItems(FXCollections.observableArrayList(personas));
+        tablaVenta.refresh();
+    }
+
     public VentaController (){
         errores = new ArrayList<String>();
         advertencias = new ArrayList<String>();
@@ -211,11 +231,7 @@ public class VentaController implements Initializable {
             for(int i=0; i < errores.size(); i++)
                 cadenaErrores+=errores.get(i)+ "\n";
 
-            Alert mensaje  = new Alert(Alert.AlertType.ERROR);
-            mensaje.setTitle("Error");
-            mensaje.setHeaderText("Se encontraron los siguientes errores");
-            mensaje.setContentText(cadenaErrores);
-            mensaje.show();
+            mensajeError("Falta de informacion",cadenaErrores);
             return;
 
         }
@@ -226,16 +242,44 @@ public class VentaController implements Initializable {
             for (int i = 0; i < advertencias.size(); i++)
                 cadenaErrores += advertencias.get(i) + "\n";
 
-            Alert mensaje = new Alert(Alert.AlertType.ERROR);
-            mensaje.setTitle("Error");
-            mensaje.setHeaderText("Se encontraron los siguientes errores");
-            mensaje.setContentText(cadenaErrores);
-            mensaje.show();
-            return;
+            mensajeError("Mensaje de error",cadenaErrores);
         }
+/*
+        int idCliente = Integer.parseInt(textFieldIDCliente.getText());
+        int idProducto = Integer.parseInt(textFieldIDProducto.getText());
+        LocalDate fecha = textFieldFecha.getValue();
+        int cantidad = Integer.parseInt(textFieldCantidad.getText());
+        float iva = Float.parseFloat(textFieldIVA.getText());
+
+        Producto producto = INSTANCE.getAlmacen().buscarProducto(idProducto);
+        int valor = producto.getValorUnitario();
+
+        int codigo = (int) Math.random();
+        float Subtotal = cantidad*valor+iva;
+        ArrayList<DetalleVenta> detalleVentas = new ArrayList<>();
+        detalleVentas.add(new DetalleVenta(cantidad,Subtotal,idProducto));
+
+        Venta venta = new Venta(codigo,fecha,total,iva,detalleVentas);
+
+*/
 
     }
 
+/*
+    public float calcularTotal (ArrayList<DetalleVenta> detalleVentas){
+
+        float total = 0;
+         float total = detalleVentas.stream().mapToLong(DetalleVenta::getSubTotal).sum();
+         return total;
+    }
+*/
+    public void mensajeError(String descripcion, String cadena) {
+        Alert mensaje = new Alert(Alert.AlertType.WARNING);
+        mensaje.setTitle("Error");
+        mensaje.setHeaderText(descripcion);
+        mensaje.setContentText(String.valueOf(cadena));
+        mensaje.show();
+    }
 
 }
 

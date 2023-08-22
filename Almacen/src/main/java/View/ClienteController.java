@@ -3,9 +3,10 @@ package View;
 import Model.Cliente;
 import Model.ClienteJuridico;
 import Model.ClienteNatural;
+import static View.AlmacenInstance.*;
 
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.StringProperty;
+import Model.Producto;
+import com.almasb.fxgl.net.Client;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -32,31 +33,34 @@ import static javafx.stage.StageStyle.UNDECORATED;
 public class ClienteController {
 
 
-    private final ObservableList<ClienteNatural>clienteNatural=FXCollections.observableArrayList();
+    private final ObservableList<Cliente> observableNatura =FXCollections.observableArrayList();
 
     @FXML
-    private TableView <ClienteNatural> tablaClienteNatural;
+    private TableView <Cliente> tablaClienteNatural;
 
     @FXML
-   private  TableColumn <ClienteNatural,String> columnaNombre;
+   private  TableColumn <Cliente,String> columnaNombre;
 
     @FXML
-    private TableColumn <ClienteNatural,String> columnaApellido;
+    private TableColumn <Cliente,String> columnaApellido;
 
     @FXML
-    private TableColumn <ClienteNatural, Integer> columnaIdentificacion;
+    private TableColumn <Cliente, Integer> columnaIdentificacion;
 
     @FXML
-    private TableColumn <ClienteNatural, Integer> columnaTelefono;
+    private TableColumn <Cliente, Integer> columnaTelefono;
 
     @FXML
-    private  TableColumn <ClienteNatural, String> columnaDireccion;
+    private  TableColumn <Cliente, String> columnaDireccion;
 
     @FXML
-    private TableColumn<ClienteNatural, LocalDate> columnaFechaNacimiento;
+    private TableColumn<Cliente, LocalDate> columnaFechaNacimiento;
 
     @FXML
-    private  TableColumn<ClienteNatural,String> columnaEmail;
+    private  TableColumn<Cliente,String> columnaEmail;
+
+    @FXML
+    private TableColumn<Cliente, Integer> columnaNit;
 
     @FXML
     private Button botonActualizar;
@@ -116,18 +120,28 @@ public class ClienteController {
     @FXML
     public void initialize() {
 
-        tablaClienteNatural.setItems(clienteNatural);
 
-        columnaNombre.setCellValueFactory(new PropertyValueFactory<ClienteNatural,String >("nombre"));
-        columnaApellido.setCellValueFactory(new PropertyValueFactory<ClienteNatural,String>("apellido"));
-        columnaTelefono.setCellValueFactory(new PropertyValueFactory<ClienteNatural,Integer>("telefono"));
-        columnaIdentificacion.setCellValueFactory(new PropertyValueFactory<ClienteNatural,Integer>("identificacion"));
-        columnaDireccion.setCellValueFactory(new PropertyValueFactory<ClienteNatural,String>("direccion"));
-        columnaFechaNacimiento.setCellValueFactory(new PropertyValueFactory<ClienteNatural,LocalDate>("fechaNacimiento"));
-        columnaEmail.setCellValueFactory(new PropertyValueFactory<ClienteNatural,String>("email"));
+            observableNatura.addAll(INSTANCE.getAlmacen().getCliente());
+            tablaClienteNatural.setItems(observableNatura.sorted());
+
+            llenarTabla(INSTANCE.getAlmacen().getCliente());
+
+            columnaNombre.setCellValueFactory(new PropertyValueFactory<Cliente, String>("nombre"));
+            columnaApellido.setCellValueFactory(new PropertyValueFactory<Cliente, String>("apellido"));
+            columnaTelefono.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("telefono"));
+            columnaIdentificacion.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("identifiacion"));
+            columnaDireccion.setCellValueFactory(new PropertyValueFactory<Cliente, String>("direccion"));
+            columnaFechaNacimiento.setCellValueFactory(new PropertyValueFactory<>("fechaNacimiento"));
+            columnaEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
+            columnaNit.setCellValueFactory(new PropertyValueFactory<>("nit"));
 
 
         }
+
+    private void llenarTabla(ArrayList<Cliente> personas) {
+        tablaClienteNatural.setItems(FXCollections.observableArrayList(personas));
+        tablaClienteNatural.refresh();
+    }
 
     public ClienteController() {
 
@@ -273,18 +287,16 @@ public class ClienteController {
             LocalDate fecha = datePickerNacimiento.getValue();
             String email= textFieldEmail.getText();
 
-           // clienteNatural.add(new ClienteNatural(nombre,apellido,direccion,identificacion,
-             //       telefono,fecha,email));
-
-            clienteNatural.add(new ClienteNatural(nombre, apellido, identificacion,telefono,direccion,
-                    fecha,email));
-                tablaClienteNatural.setItems(clienteNatural);
 
 
-            mensajeBienvenida("Registro Completo Cliente Juridico");
+            ClienteNatural clienteNatural= new ClienteNatural(nombre, apellido, identificacion,telefono,direccion,
+                    fecha,email);
 
-
-
+            observableNatura.add(clienteNatural);
+            tablaClienteNatural.setItems(observableNatura);
+            INSTANCE.getAlmacen().agregarCliente(clienteNatural);
+            tablaClienteNatural.refresh();
+            mensajeBienvenida("Registro Completo Cliente Natural");
             limpiarCampos();
 
 
@@ -299,10 +311,16 @@ public class ClienteController {
             int telefono = Integer.parseInt(textFieldTelefono.getText());
             int nit= Integer.parseInt(textFieldNit.getText());
 
-          ClienteJuridico persona = new ClienteJuridico(nombre,apellido,id
+            ClienteJuridico persona = new ClienteJuridico(nombre,apellido,id
                     ,telefono,direccion,nit);
 
 
+
+            observableNatura.add(persona);
+            tablaClienteNatural.setItems(observableNatura);
+            INSTANCE.getAlmacen().agregarCliente(persona);
+            tablaClienteNatural.refresh();
+            limpiarCampos();
             mensajeBienvenida("Registro Completo Cliente Juridico");
 
             limpiarCampos();
