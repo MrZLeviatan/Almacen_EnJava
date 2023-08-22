@@ -3,12 +3,12 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -113,20 +113,24 @@
                   <Font name="SansSerif Regular" size="13.0" />
                </font>
             </TextField>
-            <MenuButton fx:id="comboTipoPersona" layoutX="144.0" layoutY="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="117.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css">
-              <items>
-                <MenuItem fx:id="menuBotonJuridico" mnemonicParsing="false" onAction="#ocultarTextoJuridico" text="Juridico" />
-                <MenuItem fx:id="menuBotonNatural" mnemonicParsing="false" onAction="#ocultarTextoNatural" text="Natural" />
-              </items>
-               <font>
-                  <Font name="SansSerif Regular" size="13.0" />
-               </font>
-            </MenuButton>
             <Label layoutX="18.0" layoutY="29.0" text="Tipo De Persona:" textFill="#3d7579">
                <font>
                   <Font name="SansSerif Bold" size="14.0" />
                </font>
             </Label>
+            <RadioButton fx:id="botonPersonaJuridica" layoutX="317.0" layoutY="28.0" mnemonicParsing="false" onAction="#ocultarTextoJuridico" text="Persona Juridica">
+               <font>
+                  <Font name="SansSerif Bold" size="13.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="tipoPersona" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="botonPersonaNatural" layoutX="161.0" layoutY="28.0" mnemonicParsing="false" onAction="#ocultarTextoNatural" text="Persona Natural" toggleGroup="$tipoPersona">
+               <font>
+                  <Font name="SansSerif Bold" size="13.0" />
+               </font>
+            </RadioButton>
          </children>
       </Pane>
       <Label layoutX="418.0" layoutY="38.0" text="GESTION DE CLIENTES" textFill="#3d7579">
@@ -136,7 +140,7 @@
       </Label>
       <Pane layoutX="340.0" layoutY="269.0" prefHeight="78.0" prefWidth="430.0">
          <children>
-            <Button fx:id="botonCrear" layoutX="29.0" layoutY="21.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="109.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css" text="Crear" textFill="WHITE">
+            <Button fx:id="botonCrear" layoutX="29.0" layoutY="21.0" mnemonicParsing="false" onAction="#crearEvento" prefHeight="37.0" prefWidth="109.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css" text="Crear" textFill="WHITE">
                <font>
                   <Font name="SansSerif Bold" size="13.0" />
                </font>
@@ -155,16 +159,19 @@
       </Pane>
       <Pane layoutX="219.0" layoutY="331.0" prefHeight="232.0" prefWidth="671.0">
          <children>
-            <TableView fx:id="tablaCliente" layoutX="22.0" layoutY="24.0" prefHeight="200.0" prefWidth="628.0">
+            <TableView fx:id="tablaClienteNatural" layoutX="39.0" layoutY="16.0" prefHeight="200.0" prefWidth="560.0">
               <columns>
-                <TableColumn fx:id="columnaNombre" prefWidth="75.0" text="Nombre" />
-                <TableColumn fx:id="columnaApellido" prefWidth="75.0" text="Apellido" />
-                  <TableColumn fx:id="columnaID" prefWidth="75.0" text="ID" />
-                  <TableColumn fx:id="columaNacimiento" prefWidth="93.0" text="Fecha De Nacimiento" />
-                  <TableColumn fx:id="columnaEmail" prefWidth="86.0" text="Email" />
-                  <TableColumn fx:id="columnaNIT" prefWidth="63.0" text="NIT" />
-                  <TableColumn fx:id="columnaDireccion" prefWidth="83.0" text="Direccion" />
-                  <TableColumn fx:id="columnaTelefono" prefWidth="75.0" text="Telefono" />
+                <TableColumn prefWidth="559.0" text="Personas Natural">
+                     <columns>
+                      <TableColumn fx:id="columnaNombre" prefWidth="75.0" text="Nombre" />
+                        <TableColumn fx:id="columnaApellido" prefWidth="75.0" text="Apellido" />
+                        <TableColumn fx:id="columnaIdentificacion" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="columnaTelefono" prefWidth="75.0" text="Telefono" />
+                        <TableColumn fx:id="columnaDireccion" prefWidth="75.0" text="Direccion" />
+                        <TableColumn fx:id="columnaFechaNacimiento" prefWidth="108.0" text="Fecha Nacimiento" />
+                        <TableColumn fx:id="columnaEmail" prefWidth="76.0" text="Email" />
+                     </columns>
+                  </TableColumn>
               </columns>
             </TableView>
          </children>

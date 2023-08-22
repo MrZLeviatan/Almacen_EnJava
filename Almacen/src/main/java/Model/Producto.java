@@ -1,6 +1,6 @@
 package Model;
 
-public class Producto {
+public  class Producto {
 
     //SE CREAN LAS VARIBLES PARA LA CLASE PRODUCTO
 

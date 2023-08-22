@@ -51,31 +51,24 @@ public class AlmacenController {
     }
 
     public void irCliente(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Cliente.fxml"));
-        Parent root= loader.load();
-        Stage stage = new Stage();
-        stage.initStyle(UNDECORATED);
-        stage.setScene(new Scene(root));
-        Node source = (Node) mouseEvent.getSource();
-        Stage stage2 = (Stage) source.getScene().getWindow();
-        stage2.hide();
-        stage.show();
+
+        irLugar("Cliente.fxml", mouseEvent);
     }
 
     public void irProducto(MouseEvent mouseEvent) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Producto.fxml"));
-        Parent root= loader.load();
-        Stage stage = new Stage();
-        stage.initStyle(UNDECORATED);
-        stage.setScene(new Scene(root));
-        Node source = (Node) mouseEvent.getSource();
-        Stage stage2 = (Stage) source.getScene().getWindow();
-        stage2.hide();
-        stage.show();
+
+        irLugar("Producto.fxml", mouseEvent);
     }
 
     public void irVenta(MouseEvent mouseEvent) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Venta.fxml"));
+
+        irLugar("Venta.fxml",mouseEvent);
+
+    }
+
+    public void irLugar (String lugar, MouseEvent mouseEvent) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(lugar));
         Parent root= loader.load();
         Stage stage = new Stage();
         stage.initStyle(UNDECORATED);
@@ -84,7 +77,6 @@ public class AlmacenController {
         Stage stage2 = (Stage) source.getScene().getWindow();
         stage2.hide();
         stage.show();
-
     }
 }
 

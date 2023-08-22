@@ -64,12 +64,12 @@
                   <Font size="13.0" />
                </font>
             </TextField>
-            <Label layoutX="472.0" layoutY="22.0" text="Total:" textFill="#3d7579">
+            <Label layoutX="472.0" layoutY="22.0" text="SubTotal:" textFill="#3d7579">
                <font>
                   <Font name="SansSerif Bold" size="13.0" />
                </font>
             </Label>
-            <TextField fx:id="textFieldTotal" layoutX="468.0" layoutY="46.0" prefHeight="27.0" prefWidth="127.0" promptText="Total:">
+            <TextField fx:id="textFieldSubTotal" layoutX="468.0" layoutY="46.0" prefHeight="27.0" prefWidth="127.0" promptText="SubTotal:">
                <font>
                   <Font name="SansSerif Regular" size="13.0" />
                </font>
@@ -97,7 +97,7 @@
       </Pane>
       <Pane layoutX="328.0" layoutY="272.0" prefHeight="78.0" prefWidth="430.0">
          <children>
-            <Button fx:id="botonCrear" layoutX="29.0" layoutY="21.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="109.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css" text="Crear" textFill="WHITE">
+            <Button fx:id="botonCrear" layoutX="29.0" layoutY="21.0" mnemonicParsing="false" onAction="#crearEvento" prefHeight="37.0" prefWidth="109.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css" text="Crear" textFill="WHITE">
                <font>
                   <Font name="SansSerif Bold" size="13.0" />
                </font>
@@ -121,11 +121,11 @@
                   <TableColumn fx:id="columnaCodigo" prefWidth="75.0" text="Codigo" />
                   <TableColumn fx:id="columnaFecha" prefWidth="75.0" text="Fecha" />
                   <TableColumn fx:id="columnaCliente" prefWidth="75.0" text="Cliente" />
-                  <TableColumn fx:id="columnaTotal" prefWidth="83.0" text="Total" />
+                  <TableColumn fx:id="columnaSubTotal" prefWidth="63.0" text="SubTotal" />
                   <TableColumn fx:id="columnaIVA" prefWidth="75.0" text="IVA" />
                   <TableColumn fx:id="columnaCantidad" prefWidth="92.0" text="Cantidad" />
                   <TableColumn fx:id="columnaProducto" prefWidth="87.0" text="Producto" />
-                  <TableColumn fx:id="columnaSubTotal" prefWidth="63.0" text="SubTotal" />
+                  <TableColumn fx:id="columnaTotal" prefWidth="83.0" text="Total" />
                </columns>
             </TableView>
          </children>

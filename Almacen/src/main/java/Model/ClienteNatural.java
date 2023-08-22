@@ -1,35 +1,41 @@
 package Model;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.StringProperty;
+import javafx.collections.ObservableList;
+import javafx.scene.control.DatePicker;
+
+import java.time.LocalDate;
+
 //EXTENS YA QUE CLIENTE NATURAL HEREDA DE CLIENTE
-public class ClienteNatural extends Cliente{
+public class ClienteNatural extends Cliente {
 
 
     //SE CREAN LAS VARIABLES PARA CLIENTE NATURAL
 
-        private int fechaNacimiento;
-        private String email;
+    private LocalDate fechaNacimiento;
+    private String email;
 
-    //SE GENERA EL CONSTRUCTOR DE CLIENTE NATURAL; SE HEREDA EL CONSTRUCTOS DE CLIENTE
+    public ClienteNatural(String nombre, String apellido, int identifiacion, int telefono, String direccion, LocalDate fechaNacimiento, String email) {
+        super(nombre, apellido, identifiacion, telefono, direccion);
+        this.fechaNacimiento = fechaNacimiento;
+        this.email = email;
+    }
 
-        public ClienteNatural(String nombre, String apellido, String direccion, int identificacion, int telefono, int fechaNacimiento, String email) {
-            super(nombre, apellido, direccion, identificacion, telefono);
-            this.fechaNacimiento = fechaNacimiento;
-            this.email = email;
-        }
+    public LocalDate getFechaNacimiento() {
+        return fechaNacimiento;
+    }
 
-    //SE CREAN LOS GET Y SET DEL CLIENTE NATURAL
+    public String getEmail() {
+        return email;
+    }
 
-        public int getFechaNacimiento() {
-            return fechaNacimiento;
-        }
-        public String getEmail() {
-            return email;
-        }
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
 
-        public void setFechaNacimiento(int fechaNacimiento) {
-            this.fechaNacimiento = fechaNacimiento;
-        }
-        public void setEmail(String email) {
-            this.email = email;
-        }
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }
+

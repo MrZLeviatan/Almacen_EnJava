@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -108,16 +107,6 @@
                   <Font name="SansSerif Bold" size="13.0" />
                </font>
             </Label>
-            <MenuButton fx:id="menuBotonTipoDeProducto" layoutX="144.0" layoutY="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="117.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css">
-               <items>
-                  <MenuItem fx:id="menuBotonProdPerecedero" mnemonicParsing="false" onAction="#ocultarTextoPerecederos" text="Productos Perecederos" />
-                  <MenuItem fx:id="menuBotonProdRefigerado" mnemonicParsing="false" onAction="#ocultarTextoRefigerados" text="Productos Refrigerados" />
-                  <MenuItem fx:id="menuBotonProdEnvasado" mnemonicParsing="false" onAction="#ocultarTextoEnvasados" text="Productos Envasados " />
-               </items>
-               <font>
-                  <Font name="SansSerif Regular" size="13.0" />
-               </font>
-            </MenuButton>
             <Label layoutX="18.0" layoutY="29.0" text="Tipo De Producto:" textFill="#3d7579">
                <font>
                   <Font name="SansSerif Bold" size="14.0" />
@@ -139,25 +128,18 @@
                   <Font name="SansSerif Bold" size="13.0" />
                </font>
             </Label>
-            <MenuButton fx:id="menuBotonPaisOrigen" alignment="CENTER" disable="true" layoutX="168.0" layoutY="229.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="127.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css">
-              <items>
-                <MenuItem fx:id="menuBotonColombia" mnemonicParsing="false" text="Colombia" />
-                <MenuItem fx:id="menuBotonArgentina" mnemonicParsing="false" text="Argentina" />
-                  <MenuItem fx:id="menuBotonChile" mnemonicParsing="false" text="Chile" />
-                  <MenuItem fx:id="menuBotonEcuador" mnemonicParsing="false" text="Ecuador" />
-                  <MenuItem fx:id="menuBotonPeru" mnemonicParsing="false" text="Peru" />
-              </items>
-            </MenuButton>
+            <ComboBox fx:id="comboBoxTipoPais" disable="true" layoutX="168.0" layoutY="229.0" prefHeight="27.0" prefWidth="127.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css" />
+            <ComboBox fx:id="comboBoxTipoProducto" layoutX="168.0" layoutY="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css" />
          </children>
       </Pane>
-      <Label layoutX="435.0" layoutY="50.0" text="GESTION DE PRODUCTOS" textFill="#3d7579">
+      <Label layoutX="435.0" layoutY="38.0" text="GESTION DE PRODUCTOS" textFill="#3d7579">
          <font>
             <Font name="SansSerif Bold" size="24.0" />
          </font>
       </Label>
       <Pane layoutX="375.0" layoutY="351.0" prefHeight="78.0" prefWidth="430.0">
          <children>
-            <Button fx:id="botonCrear" layoutX="29.0" layoutY="21.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="109.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css" text="Crear" textFill="WHITE">
+            <Button fx:id="botonCrear" layoutX="29.0" layoutY="21.0" mnemonicParsing="false" onAction="#crearProducto" prefHeight="37.0" prefWidth="109.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css" text="Crear" textFill="WHITE">
                <font>
                   <Font name="SansSerif Bold" size="13.0" />
                </font>

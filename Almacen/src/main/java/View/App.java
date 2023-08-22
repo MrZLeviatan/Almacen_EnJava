@@ -9,6 +9,7 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
+
 public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
@@ -17,9 +18,11 @@ public class App extends Application {
       Scene loginScene=new Scene(root);
       stage.setTitle("Almacen Happy Meat Farms");
       stage.initStyle(StageStyle.UNDECORATED);
+
       stage.setScene(loginScene);
       stage.show();
     }
+
 
     public static void main(String[] args) {
 

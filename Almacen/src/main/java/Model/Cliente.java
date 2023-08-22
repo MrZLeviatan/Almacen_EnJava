@@ -1,55 +1,58 @@
 package Model;
 
+
 public class Cliente {
 
-    //SE CREAN LAS VARIABLES DE LA CLASE CLIENTE
-        private String nombre,apellido,direccion;
-        private int identificacion,telefono;
+    private String nombre;
+    private String apellido;
 
+    private int identifiacion;
 
-    //SE CREA EL CONSTRUCTOR DE CLIENTES
+    private int telefono;
 
-        public Cliente(String nombre, String apellido, String direccion, int identificacion, int telefono) {
-            this.nombre = nombre;
-            this.apellido = apellido;
-            this.direccion = direccion;
-            this.identificacion = identificacion;
-            this.telefono = telefono;
-        }
+    private  String direccion;
 
-    //SE CREA LOS GET DE CLIENTES
+    public Cliente(String nombre, String apellido, int identifiacion, int telefono, String direccion) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.identifiacion = identifiacion;
+        this.telefono = telefono;
+        this.direccion = direccion;
+    }
 
-        public String getNombre() {
-            return nombre;
-        }
-        public String getApellido() {
-            return apellido;
-        }
-        public String getDireccion() {
-            return direccion;
-        }
-        public int getIdentificacion() {
-            return identificacion;
-        }
-        public int getTelefono() {
-            return telefono;
-        }
+    public String getNombre() {
+        return nombre;
+    }
 
-    //SE CREA LOS SET DE CLIENTES
+    public String getApellido() {
+        return apellido;
+    }
 
-        public void setNombre(String nombre) {
-            this.nombre = nombre;
-        }
-        public void setApellido(String apellido) {
-            this.apellido = apellido;
-        }
-        public void setDireccion(String direccion) {
-            this.direccion = direccion;
-        }
-        public void setIdentificacion(int identificacion) {
-            this.identificacion = identificacion;
-        }
-        public void setTelefono(int telefono) {
-            this.telefono = telefono;
-        }
+    public int getIdentifiacion() {
+        return identifiacion;
+    }
+
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public String getDireccion(){ return direccion;}
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public void setIdentifiacion(int identifiacion) {
+        this.identifiacion = identifiacion;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+
+    public void setDireccion(String direccion){this.direccion= direccion;}
 }
