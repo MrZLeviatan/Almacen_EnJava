@@ -1,0 +1,170 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>1170</x><y>46</y><w>210</w><h>250</h></coordinates><panel_attributes>Almacen
+--
+
++listaCliente &lt;Cliente&gt;
++listaProductos &lt;Productos&gt;
++listaVenta &lt;Venta&gt;
+
+--
+
++getiLstaClientes()
++getListaProducto()
++getListaVenta()
+
++setListaClientes (Clientes)
++setListaProductos(Productos)
++setListaVenta (Venta)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>740</x><y>476</y><w>280</w><h>340</h></coordinates><panel_attributes>Cliente
+--
+
+-nombre: String
+-apellido: String
+-identificacion: int
+-direccion: String
+-telefono: int
+
+--
+
++getNombre (): String
++getApellido (): String
++getIdentificacion (): int
++getDireccion (): String
++getTelefono (): int
+
++setNombre (nombre: String)
++setApellido (apellido: String)
++setIdentifiacion (identifiacion: int)
++setDireccion (direccion: String)
++setTelefono (telefono: int)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>926</y><w>270</w><h>190</h></coordinates><panel_attributes>ClienteNatural
+--
+
+-fechaNacimiento: int
+-email: String
+
+--
+
++getFechaNacimiento (): int
++getEmail (): String
+
++setFechaNacimiento (fechaNacimiento : int)
++setEmail (email: String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>710</x><y>806</y><w>80</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>60;10;10;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>850</x><y>896</y><w>270</w><h>170</h></coordinates><panel_attributes>ClienteJuridica
+--
+
+-nit: int
+
+--
+
++getNit (): int
+
++setNit (nit: int)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>860</x><y>806</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1310</x><y>466</y><w>280</w><h>340</h></coordinates><panel_attributes>Producto
+--
+
+-id: int
+-nombre: String
+-descripcion: String
+-valorUnitario: int
+-cantidad: int
+
+--
+
++getId (): int
++getNombre (): String
++getDescripcion (): String
++getValorUnitario (): int
++getCantidad (): int
+
++setId (id: int)
++setNombre (nombre: String)
++setDescripcion (descripcion: String)
++setValorUnitario (valorUnitario: int)
++setCantidad (cantidad: int)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1190</x><y>916</y><w>320</w><h>160</h></coordinates><panel_attributes>ProductoPerecedero
+--
+
+-fechaVencimiento: int
+
+--
+
++getFechaVencimiento (): int
+
++setFechaVencimiento (fechaVencimiento : int)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1420</x><y>796</y><w>30</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1550</x><y>896</y><w>320</w><h>190</h></coordinates><panel_attributes>ProductoRefrigerado
+--
+
+-temperaturaOptima: int
+-codigoAprobacion: int
+
+--
+
++getTemperaturaOptima () : int
++getCodigoAprobacion (): int
+
++setTemperaturaOptima (temperaturaOptima: int)
++setCodigoAprobacion (codigoAprobacion : int)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1580</x><y>796</y><w>70</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;50;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1890</x><y>726</y><w>320</w><h>250</h></coordinates><panel_attributes>ProductoEnvasado
+--
+
+-fechaEnvasado: int
+-peso: float
+-paisOrigen: PaisOrigen
+
+--
+
++getFechaEnvasado (): int
++getPeso (): float
++getPaisOrigen (): PaisOrigen
+
++setFechaVencimiento (fechaVencimiento: int)
++setPeso (peso: float)
++setPaisOrigen (paisOrigen: PaisOrigen)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1580</x><y>766</y><w>330</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;310;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1950</x><y>1086</y><w>320</w><h>140</h></coordinates><panel_attributes>&lt;&lt;enumeration&gt;&gt;
+	PaisOrigen
+--
+
+-Colombia
+-Argentina
+-Chile
+-Peru
+-Ecuador
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>230</x><y>566</y><w>280</w><h>300</h></coordinates><panel_attributes>Venta
+--
+
+-codigo: int
+-fecha: int
+-total: float
+-iva: float
+
+--
+
++getCodigo (): int
++getFecha (): int
++getTotal (): float
++getIva () : float
+
++setCodigo (codigo: int)
++setFecha (fecha: int)
++setTotal (total: float)
++setIva (iva: float)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>976</y><w>350</w><h>220</h></coordinates><panel_attributes>DetalleVenta
+--
+
+-cantidadProductosVendidos: int
+-subtotal: float
+
+--
+
++getCantidadProductosVendidos () : int
++getSubtotal (): float
+
++setCantidadProductosVendidos (productosVendidos : int)
++setSubtotal (subtotal: float)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2080</x><y>966</y><w>30</w><h>140</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>696</y><w>160</w><h>300</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1...n
+m2=+DetalleVenta</panel_attributes><additional_attributes>140;10;10;10;10;280</additional_attributes></element><element><id>Relation</id><coordinates><x>500</x><y>696</y><w>260</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=+Cliente
+m1=1</panel_attributes><additional_attributes>10;10;240;10</additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>126</y><w>840</w><h>460</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1    
+m2=+listaVenta
+</panel_attributes><additional_attributes>820;20;10;20;10;440</additional_attributes></element><element><id>Relation</id><coordinates><x>1290</x><y>286</y><w>270</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=+listaProducto</panel_attributes><additional_attributes>10;10;10;120;170;120;170;180</additional_attributes></element><element><id>Relation</id><coordinates><x>880</x><y>296</y><w>370</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2= +listaClientes
+</panel_attributes><additional_attributes>340;10;340;100;10;100;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>646</y><w>990</w><h>540</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2= +Producto     *
+m1= 1
+</panel_attributes><additional_attributes>10;510;820;500;820;10;970;10</additional_attributes></element></diagram>

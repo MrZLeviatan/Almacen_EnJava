@@ -1,0 +1,78 @@
+
+/* 
+    Created on : 19/05/2023, 1:34:21 a. m.
+    Author     : Mr. Nicolas
+*/
+
+/*
+    COLOR PRETERMINADO
+*/
+.boton{
+    -fx-background-color:  #ECD264;
+    -fx-background-radius: 20;
+}
+/*
+    COLOR CUANDO PASA POR ENCIMA EL MOUSE
+*/
+.boton:hover{
+    -fx-background-color:  #FFCE00;
+    -fx-background-radius: 20;
+}
+
+/*
+    COLOR CUANDO ES PRESIONADO
+*/
+
+.boton:pressed {
+    -fx-background-color: #AD8C00;
+    -fx-background-radius: 20;
+}
+
+.x {
+    -fx-background-color: #f9f6ea;
+}
+.x:hover{
+    -fx-background-color: #C10909A8;
+}
+.x:pressed{
+    -fx-background-color: #C109097A;
+}
+
+.botonesVentanaEmergente{
+    -fx-background-color: #9E9E9E;
+    -fx-background-radius: 10;
+}
+.botonesVentanaEmergente:hover{
+    -fx-background-color: #B8B2B2;
+    -fx-background-radius: 10;
+}
+.botonesVentanaEmergente:pressed{
+    -fx-background-color: #555353;
+    -fx-background-radius:10 ;
+}
+
+.botonCancelar{
+    -fx-background-color: #9E9E9E;
+    -fx-background-radius: 10;
+}
+.botonCancelar:hover{
+    -fx-background-color: #C10909A8;
+    -fx-background-radius: 10;
+}
+.botonCancelar:pressed{
+    -fx-background-color: #C109097A;
+    -fx-background-radius:10 ;
+}
+
+.botonSeleccion{
+    -fx-background-color:  #BABABA;
+    -fx-background-radius: 10;
+}
+.botonSeleccion:hover{
+    -fx-background-color:  #736868;
+    -fx-background-radius: 10;
+}
+.botonSeleccion:pressed {
+    -fx-background-color: #463C3C;
+    -fx-background-radius: 10;
+}

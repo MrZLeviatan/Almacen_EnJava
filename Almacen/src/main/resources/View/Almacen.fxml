@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="430.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AlmacenController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f9f6ea" height="430.0" stroke="BLACK" strokeType="INSIDE" width="634.0" />
+      <Label alignment="CENTER" layoutX="581.0" layoutY="14.0" onMouseClicked="#labCerrar" prefHeight="35.0" prefWidth="40.0" styleClass="x" stylesheets="@../Style/HojaEstilo.css" text="X" fx:id="x">
+         <font>
+            <Font name="Arial Black" size="24.0" />
+         </font>
+      </Label>
+      <Pane layoutX="274.0" layoutY="-119.0" prefHeight="200.0" prefWidth="360.0" rotate="-63.4" style="-fx-background-color: #64cec5; -fx-background-radius: 79;" />
+      <Pane layoutX="14.0" layoutY="20.0" prefHeight="400.0" prefWidth="201.0">
+         <children>
+            <ImageView fitHeight="177.0" fitWidth="180.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/Icon.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="189.0" layoutY="15.0" orientation="VERTICAL" prefHeight="371.0" prefWidth="0.0" style="-fx-background-color: #41aeb4;" />
+         </children>
+      </Pane>
+      <Pane layoutX="219.0" layoutY="57.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Circle layoutX="102.0" layoutY="98.0" radius="48.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.6745098233222961" green="0.8784313797950745" blue="0.062745101749897" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.006711409395973154">
+                           <color>
+                              <Color red="0.6745098233222961" green="0.8784313797950745" blue="0.062745101749897" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.75">
+                           <color>
+                              <Color red="0.9700000286102295" green="0.9583600163459778" blue="0.9118000268936157" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Circle>
+            <ImageView fitHeight="124.0" fitWidth="102.0" layoutX="51.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/IconCliente.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="68.0" layoutY="155.0" text="CLIENTE" textFill="#596b23">
+               <font>
+                  <Font name="SansSerif Regular" size="16.0" />
+               </font>
+            </Label>
+            <Button layoutX="18.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#irCliente" opacity="0.14" prefHeight="161.0" prefWidth="164.0" styleClass="boton" stylesheets="@../Style/HojaEstilo.css" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true" />
+         </children>
+      </Pane>
+      <Pane layoutX="421.0" layoutY="57.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Circle layoutX="100.0" layoutY="101.0" radius="48.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.12156862765550613" green="0.5764706134796143" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.75">
+                           <color>
+                              <Color red="0.9700000286102295" green="0.9583600163459778" blue="0.9118000268936157" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9686274528503418" green="0.95686274766922" blue="0.9137254953384399" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Circle>
+            <ImageView fitHeight="114.0" fitWidth="122.0" layoutX="39.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/IconProducto.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="54.0" layoutY="157.0" text="PRODUCTO" textFill="#0d5b82">
+               <font>
+                  <Font name="SansSerif Regular" size="16.0" />
+               </font>
+            </Label>
+            <Button layoutX="18.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#irProducto" opacity="0.14" prefHeight="161.0" prefWidth="164.0" styleClass="boton" stylesheets="@../Style/HojaEstilo.css" />
+         </children>
+      </Pane>
+      <Pane layoutX="319.0" layoutY="220.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Circle layoutX="100.0" layoutY="113.0" radius="48.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.8705882430076599" green="0.7568627595901489" blue="0.07058823853731155" opacity="0.5099999904632568" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.006711409395973154">
+                           <color>
+                              <Color red="0.8705882430076599" green="0.7568627595901489" blue="0.07058823853731155" opacity="0.5099999904632568" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.75">
+                           <color>
+                              <Color red="0.9700000286102295" green="0.9583600163459778" blue="0.9118000268936157" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Circle>
+            <ImageView fitHeight="124.0" fitWidth="102.0" layoutX="49.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/IconTransaccion.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="73.0" layoutY="170.0" text="VENTA" textFill="#83710c">
+               <font>
+                  <Font name="SansSerif Regular" size="16.0" />
+               </font>
+            </Label>
+            <Button layoutX="18.0" layoutY="32.0" mnemonicParsing="false" onMouseClicked="#irVenta" opacity="0.14" prefHeight="161.0" prefWidth="164.0" styleClass="boton" stylesheets="@../Style/HojaEstilo.css" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
