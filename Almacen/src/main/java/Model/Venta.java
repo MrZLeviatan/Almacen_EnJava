@@ -2,6 +2,7 @@ package Model;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Venta {
 
@@ -9,27 +10,36 @@ public class Venta {
 
         private int codigo;
 
-        private LocalDate fecha;
-        private float total, iva;
-        private ArrayList<DetalleVenta> detalleVenta;
+        private Date fecha;
+        private float total, iva, subTotal;
+
+        private int  cantidadPro;
+
+        private String nombreCliente, productoUso;
 
 
-    //SE GENERA EL CONSTRUCTOR DE VENTA
 
-        public Venta(int codigo, LocalDate fecha, float total, float iva, ArrayList<DetalleVenta> detalleVenta) {
+
+//SE GENERA EL CONSTRUCTOR DE VENTA
+
+        public Venta(int codigo, Date fecha, float total, float iva, float subTotal, int cantidadPro, String nombreCliente, String productoUso) {
                 this.codigo = codigo;
                 this.fecha = fecha;
                 this.total = total;
                 this.iva = iva;
-                this.detalleVenta = detalleVenta;
+                this.subTotal = subTotal;
+                this.cantidadPro = cantidadPro;
+                this.nombreCliente = nombreCliente;
+                this.productoUso = productoUso;
         }
+
 
     //SE GENERA EL GET DE VENTA
 
         public int getCodigo() {
                 return codigo;
         }
-        public LocalDate getFecha() {
+        public Date getFecha() {
                 return fecha;
         }
         public float getTotal() {
@@ -38,16 +48,20 @@ public class Venta {
         public float getIva() {
                 return iva;
         }
-        public ArrayList<DetalleVenta> getDetalleVenta() {
-                return detalleVenta;
+        public float getSubTotal () {
+                return subTotal;
         }
+        public int getCantidadPro (){ return cantidadPro;}
 
-    //SE GENERA EL SET DE VENTA
+        public String getNombreCliente() {return nombreCliente;}
+
+        public String getProductoUso() {return productoUso;}
+//SE GENERA EL SET DE VENTA
 
         public void setCodigo(int codigo) {
                 this.codigo = codigo;
         }
-        public void setFecha(LocalDate fecha) {
+        public void setFecha(Date fecha) {
                 this.fecha = fecha;
         }
         public void setTotal(float total) {
@@ -56,7 +70,10 @@ public class Venta {
         public void setIva(float iva) {
                 this.iva = iva;
         }
-        public void setDetalleVenta(ArrayList<DetalleVenta> detalleVenta) {
-                this.detalleVenta = detalleVenta;
-        }
+        public void setSubTotal (float subTotal) {this.subTotal = subTotal;}
+        public void setCantidadPro (int cantidadPro) { this.cantidadPro = cantidadPro;}
+
+        public void setNombreCliente(String nombreCliente) {this.nombreCliente = nombreCliente;}
+
+        public void setProductoUso(String productoUso) {this.productoUso = productoUso;}
 }

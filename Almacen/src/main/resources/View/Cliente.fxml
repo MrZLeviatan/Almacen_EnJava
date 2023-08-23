@@ -140,17 +140,12 @@
       </Label>
       <Pane layoutX="340.0" layoutY="269.0" prefHeight="78.0" prefWidth="430.0">
          <children>
-            <Button fx:id="botonCrear" layoutX="29.0" layoutY="21.0" mnemonicParsing="false" onAction="#crearEvento" prefHeight="37.0" prefWidth="109.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css" text="Crear" textFill="WHITE">
+            <Button fx:id="botonCrear" layoutX="72.0" layoutY="21.0" mnemonicParsing="false" onAction="#crearEvento" prefHeight="37.0" prefWidth="109.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css" text="Crear" textFill="WHITE">
                <font>
                   <Font name="SansSerif Bold" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="botonActualizar" layoutX="161.0" layoutY="21.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="109.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css" text="Actualizar" textFill="WHITE">
-               <font>
-                  <Font name="SansSerif Bold" size="13.0" />
-               </font>
-            </Button>
-            <Button fx:id="botonEliminar" layoutX="293.0" layoutY="21.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="109.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css" text="Eliminar" textFill="WHITE">
+            <Button fx:id="botonEliminar" layoutX="227.0" layoutY="21.0" mnemonicParsing="false" onAction="#eliminarEvento" prefHeight="37.0" prefWidth="109.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css" text="Eliminar" textFill="WHITE">
                <font>
                   <Font name="SansSerif Bold" size="13.0" />
                </font>
@@ -161,7 +156,7 @@
          <children>
             <TableView fx:id="tablaClienteNatural" layoutX="23.0" layoutY="16.0" prefHeight="200.0" prefWidth="626.0">
               <columns>
-                <TableColumn prefWidth="595.0" text="Personas Natural">
+                <TableColumn prefWidth="595.0" text="Lista De Clientes">
                      <columns>
                       <TableColumn fx:id="columnaNombre" prefWidth="75.0" text="Nombre" />
                         <TableColumn fx:id="columnaApellido" prefWidth="75.0" text="Apellido" />

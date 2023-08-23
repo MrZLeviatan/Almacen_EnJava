@@ -329,6 +329,33 @@ public class ClienteController {
 
     }
 
+    public void eliminarEvento (ActionEvent evento) throws Exception {
+
+        if (textFieldId.getText().isEmpty())
+            errores.add("El campo Identificacion es obligarotio");
+
+        if (!textFieldId.getText().isEmpty())
+            try {
+                Integer.parseInt(textFieldId.getText());
+            } catch (NumberFormatException e) {
+                Alert mensaje = new Alert(Alert.AlertType.WARNING);
+                mensaje.setTitle("Error");
+                mensaje.setHeaderText("El campo identificacion debe ser numerico");
+                mensaje.show();
+
+            }
+        int id= Integer.parseInt(textFieldId.getText());
+
+        INSTANCE.getAlmacen().eliminarCliente(INSTANCE.getAlmacen().buscarCliente(id));
+
+        tablaClienteNatural.refresh();
+
+        Alert mensaje = new Alert(Alert.AlertType.INFORMATION);
+        mensaje.setTitle("Informacion");
+        mensaje.setHeaderText("El cliente ha sido eliminado");
+        mensaje.show();
+    }
+
     public void limpiarCampos(){
         textFieldNombre.setText("");
         textFieldApellido.setText("");

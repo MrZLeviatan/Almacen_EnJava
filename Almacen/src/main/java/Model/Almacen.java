@@ -1,6 +1,9 @@
 package Model;
 
 
+import View.AlmacenInstance;
+import javafx.scene.control.Alert;
+
 import java.util.ArrayList;
 
 public class Almacen   {
@@ -12,9 +15,12 @@ public class Almacen   {
 
     public Almacen(){
 
+
         listaproducto= new ArrayList<>();
         listaVenta= new ArrayList<>();
         listacliente = new ArrayList<>();
+
+
 
     }
 
@@ -33,13 +39,30 @@ public class Almacen   {
     //CREAR METODO PARA BUSCAR VARIABLES
 
 
-    public Cliente buscarCliente(int identificacion){
-        return listacliente.stream().filter(cliente -> cliente.getIdentifiacion()==identificacion).findFirst().get();
+    public Cliente buscarCliente(int identificacion) throws Exception {
+        try {
+            return listacliente.stream().filter(cliente -> cliente.getIdentifiacion()==identificacion).findFirst().get();
+        }catch (Exception e){
+            Alert mensaje = new Alert(Alert.AlertType.WARNING);
+            mensaje.setTitle("Error");
+            mensaje.setHeaderText("Cliente no encontrado");
+            mensaje.show();
+            throw new Exception(e);
+        }
     }
 
-    public Producto buscarProducto(int codigo){
-        return listaproducto.stream().filter(producto -> producto.getId()== codigo).findFirst().get();
 
+    public Producto buscarProducto(int codigo) throws Exception {
+        try {
+            return listaproducto.stream().filter(producto -> producto.getId() == codigo).findFirst().get();
+
+        } catch (Exception e) {
+            Alert mensaje = new Alert(Alert.AlertType.WARNING);
+            mensaje.setTitle("Error");
+            mensaje.setHeaderText("Producto no encontrado");
+            mensaje.show();
+            throw new Exception(e);
+        }
     }
 
 
@@ -50,7 +73,12 @@ public class Almacen   {
 
     //CREAR METODOS PARA ELIMINAR VARIABLES
 
-    public void eliminarCliente (Cliente persona){listacliente.remove(persona);}
+    public void eliminarCliente (Cliente persona) {
+
+        listaVenta.remove(persona.getIdentifiacion());
+
+    }
+
 
     public void eliminarProducto (Producto bloque){listaproducto.remove(bloque);}
 

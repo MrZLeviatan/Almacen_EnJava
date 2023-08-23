@@ -401,11 +401,11 @@ public class ProductoController {
 
 
     public void mensajeError(String descripcion, String cadena) {
-        Alert mensaje = new Alert(Alert.AlertType.WARNING);
-        mensaje.setTitle("Error");
-        mensaje.setHeaderText(descripcion);
-        mensaje.setContentText(String.valueOf(cadena));
-        mensaje.show();
+            Alert mensaje = new Alert(Alert.AlertType.WARNING);
+            mensaje.setTitle("Error");
+            mensaje.setHeaderText(descripcion);
+            mensaje.setContentText(String.valueOf(cadena));
+            mensaje.show();
     }
 
     public void irOtraPagina (String view) throws IOException {

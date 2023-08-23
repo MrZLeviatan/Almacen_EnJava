@@ -3,13 +3,12 @@ package View;
 import Model.*;
 
 import static View.AlmacenInstance.INSTANCE;
-import javafx.beans.value.ObservableValue;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -18,21 +17,17 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.util.Callback;
 
 import java.io.IOException;
-import java.net.URL;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Locale;
-import java.util.ResourceBundle;
+import java.util.*;
 
-import static View.AlmacenInstance.INSTANCE;
 import static javafx.stage.StageStyle.UNDECORATED;
 
 public class VentaController  {
 
     private final ObservableList<Venta> observableVenta =FXCollections.observableArrayList();
+
+    private final ObservableList<Producto> observableProducto =FXCollections.observableArrayList();
 
     @FXML
     private Button botonActualizar;
@@ -50,13 +45,13 @@ public class VentaController  {
     private TableColumn<Venta, Integer> columnaCantidad;
 
     @FXML
-    private TableColumn<Venta, Integer> columndaCliente;
+    private TableColumn<Venta, String> columnaCliente;
 
     @FXML
     private TableColumn<Venta, Integer> columnaCodigo;
 
     @FXML
-    private TableColumn<Venta, LocalDate> columnaFecha;
+    private TableColumn<Venta, Date> columnaFecha;
 
 
     @FXML
@@ -72,11 +67,6 @@ public class VentaController  {
     @FXML
     private TextField textFieldCantidad;
 
-    @FXML
-    private TextField textFieldCodigo;
-
-    @FXML
-    private DatePicker textFieldFecha;
 
     @FXML
     private TextField textFieldIDCliente;
@@ -88,9 +78,6 @@ public class VentaController  {
     private TextField textFieldIVA;
 
     @FXML
-    private TextField textFieldSubTotal;
-
-    @FXML
     private Label x;
 
     private ArrayList<String> errores;
@@ -98,10 +85,8 @@ public class VentaController  {
     private ArrayList<String> advertencias;
 
 
-
-
     @FXML
-    public void initialize() {
+    public void initialize(){
 
         observableVenta.addAll(INSTANCE.getAlmacen().getVenta());
         tablaVenta.setItems(observableVenta.sorted());
@@ -109,12 +94,14 @@ public class VentaController  {
         llenarTabla(INSTANCE.getAlmacen().getVenta());
 
         columnaCodigo.setCellValueFactory(new PropertyValueFactory<Venta, Integer>("codigo"));
-        columnaFecha.setCellValueFactory(new PropertyValueFactory<Venta,LocalDate>("fecha"));
-        columndaCliente.setCellValueFactory(new PropertyValueFactory<>("nombre"));
-        columnaProducto.setCellValueFactory(new PropertyValueFactory<>("nombreProducto"));
+        columnaFecha.setCellValueFactory(new PropertyValueFactory<Venta,Date>("fecha"));
+        columnaProducto.setCellValueFactory(new PropertyValueFactory<>("productoUso"));
         columnaTotal.setCellValueFactory(new PropertyValueFactory<>("total"));
+        columnaCantidad.setCellValueFactory(new PropertyValueFactory<>("cantidadPro"));
+        columnaCliente.setCellValueFactory(new PropertyValueFactory<Venta, String>("nombreCliente"));
 
     }
+
 
     private void llenarTabla(ArrayList<Venta> personas) {
         tablaVenta.setItems(FXCollections.observableArrayList(personas));
@@ -131,18 +118,6 @@ public class VentaController  {
     public void validar (){
         errores.clear();
 
-        if(textFieldCodigo.getText().isEmpty())
-            errores.add("El campo codigo es obligatorio");
-
-        if (textFieldFecha.getValue()== null)
-            errores.add("Debe seleccionar una fecha");
-
-        if (textFieldIDCliente.getText().isEmpty())
-            errores.add("El campo ID Cliente es obligatorio");
-
-        if (textFieldSubTotal.getText().isEmpty())
-            errores.add("El campo Sub Total es obligatorio");
-
         if (textFieldIVA.getText().isEmpty())
             errores.add("El campo IVA es obligatorio");
 
@@ -157,12 +132,6 @@ public class VentaController  {
     public void verificacion(){
         advertencias.clear();
 
-        if (!textFieldCodigo.getText().isEmpty())
-            try {
-                Integer.parseInt(textFieldCodigo.getText());
-            }catch (NumberFormatException e){
-                advertencias.add("El campo Codigo debe ser numerico");
-            }
 
         if (!textFieldIDCliente.getText().isEmpty())
             try {
@@ -171,12 +140,6 @@ public class VentaController  {
                 advertencias.add("El campo ID Cliente debe ser numerico");
             }
 
-        if (!textFieldSubTotal.getText().isEmpty())
-            try {
-                Boolean.parseBoolean(textFieldSubTotal.getText());
-            }catch (NumberFormatException e){
-                advertencias.add("El campo Sub Total debe ser numerico");
-            }
 
         if (!textFieldIVA.getText().isEmpty())
             try {
@@ -223,7 +186,7 @@ public class VentaController  {
         stage.show();
     }
 
-    public void crearEvento(ActionEvent actionEvent) {
+    public void crearEvento(ActionEvent actionEvent) throws Exception {
 
         validar();
         if(errores.size()>0){
@@ -244,35 +207,51 @@ public class VentaController  {
 
             mensajeError("Mensaje de error",cadenaErrores);
         }
-/*
+
+        int codigo = 1;
         int idCliente = Integer.parseInt(textFieldIDCliente.getText());
         int idProducto = Integer.parseInt(textFieldIDProducto.getText());
-        LocalDate fecha = textFieldFecha.getValue();
+        Date fecha = new Date();
         int cantidad = Integer.parseInt(textFieldCantidad.getText());
         float iva = Float.parseFloat(textFieldIVA.getText());
 
-        Producto producto = INSTANCE.getAlmacen().buscarProducto(idProducto);
-        int valor = producto.getValorUnitario();
 
-        int codigo = (int) Math.random();
-        float Subtotal = cantidad*valor+iva;
+        int valor = INSTANCE.getAlmacen().buscarProducto(idProducto).getValorUnitario();
+
+        String nombreCliente = INSTANCE.getAlmacen().buscarCliente(idCliente).getNombre();
+
+        String nombreProducto= INSTANCE.getAlmacen().buscarProducto(idProducto).getNombreProducto();
+
+
+        float subtotal = cantidad*valor;
         ArrayList<DetalleVenta> detalleVentas = new ArrayList<>();
-        detalleVentas.add(new DetalleVenta(cantidad,Subtotal,idProducto));
 
-        Venta venta = new Venta(codigo,fecha,total,iva,detalleVentas);
+        float total=calcularTotal(detalleVentas);
+        Venta venta = new Venta(codigo,fecha,total,iva,subtotal,idProducto,nombreCliente,nombreProducto);
 
-*/
+        observableVenta.add(venta);
+        tablaVenta.setItems(observableVenta);
+
+        INSTANCE.getAlmacen().agregarVenta(venta);
+        tablaVenta.refresh();
+        mensajeRegistro("Registro Completo del Producto");
+
+
+        llenarCampos();
+
 
     }
 
-/*
+
     public float calcularTotal (ArrayList<DetalleVenta> detalleVentas){
-
-        float total = 0;
-         float total = detalleVentas.stream().mapToLong(DetalleVenta::getSubTotal).sum();
-         return total;
+        int iva = Integer.parseInt(textFieldIVA.getText());
+        float total=0;
+        for(int i=0;i<detalleVentas.size();i++){
+            total+=detalleVentas.get(i).getSubTotal();
+        }
+        return total+iva;
     }
-*/
+
     public void mensajeError(String descripcion, String cadena) {
         Alert mensaje = new Alert(Alert.AlertType.WARNING);
         mensaje.setTitle("Error");
@@ -280,6 +259,27 @@ public class VentaController  {
         mensaje.setContentText(String.valueOf(cadena));
         mensaje.show();
     }
+
+
+    public void mensajeRegistro(String descripcion){
+
+        Alert mensaje = new Alert(Alert.AlertType.CONFIRMATION);
+        mensaje.setTitle("Mensaje");
+        mensaje.setHeaderText(descripcion);
+        mensaje.setContentText("Registro de venta completo");
+        mensaje.show();
+
+    }
+
+    public void llenarCampos (){
+        textFieldIDCliente.setText("");
+        textFieldIDProducto.setText("");
+        textFieldCantidad.setText("");
+        textFieldIVA.setText("");
+
+    }
+
+
 
 }
 

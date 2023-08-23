@@ -139,17 +139,12 @@
       </Label>
       <Pane layoutX="375.0" layoutY="351.0" prefHeight="78.0" prefWidth="430.0">
          <children>
-            <Button fx:id="botonCrear" layoutX="29.0" layoutY="21.0" mnemonicParsing="false" onAction="#crearProducto" prefHeight="37.0" prefWidth="109.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css" text="Crear" textFill="WHITE">
+            <Button fx:id="botonCrear" layoutX="79.0" layoutY="21.0" mnemonicParsing="false" onAction="#crearProducto" prefHeight="37.0" prefWidth="109.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css" text="Crear" textFill="WHITE">
                <font>
                   <Font name="SansSerif Bold" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="botonActualizar" layoutX="161.0" layoutY="21.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="109.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css" text="Actualizar" textFill="WHITE">
-               <font>
-                  <Font name="SansSerif Bold" size="13.0" />
-               </font>
-            </Button>
-            <Button fx:id="botonEliminar" layoutX="293.0" layoutY="21.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="109.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css" text="Eliminar" textFill="WHITE">
+            <Button fx:id="botonEliminar" layoutX="242.0" layoutY="21.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="109.0" styleClass="botonSeleccion" stylesheets="@../Style/HojaEstilo.css" text="Eliminar" textFill="WHITE">
                <font>
                   <Font name="SansSerif Bold" size="13.0" />
                </font>
@@ -158,18 +153,22 @@
       </Pane>
       <Pane layoutX="209.0" layoutY="416.0" prefHeight="244.0" prefWidth="760.0">
          <children>
-            <TableView fx:id="tablaProductos" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="738.0">
+            <TableView fx:id="tablaProductos" layoutX="11.0" layoutY="22.0" prefHeight="200.0" prefWidth="738.0">
                <columns>
-                  <TableColumn fx:id="columnaCodigo" prefWidth="53.0" text="Codigo" />
-                  <TableColumn fx:id="columnaNombre" prefWidth="65.0" text="Nombre" />
-                  <TableColumn fx:id="columnaValorUnitario" prefWidth="82.0" text="Valor Unitario" />
-                  <TableColumn fx:id="columnaCantidad" prefWidth="68.0" text="Cantidad" />
-                  <TableColumn fx:id="columnaFechaVencimiento" prefWidth="94.0" text="Fecha De Vencimiento" />
-                  <TableColumn fx:id="columnaCodigoAprob" prefWidth="84.0" text="Codigo Aprobacion" />
-                  <TableColumn fx:id="columnaTemperatura" prefWidth="73.0" text="Temperatura" />
-                  <TableColumn fx:id="columnaFechaDeEnva" prefWidth="83.0" text="Fecha De Enva" />
-                  <TableColumn fx:id="columnaPeso" prefWidth="64.0" text="Peso Envasado" />
-                  <TableColumn fx:id="columnaPaisOrigen" prefWidth="70.0" text="Pais Origen" />
+                  <TableColumn prefWidth="75.0" text="Lista De Productos">
+                     <columns>
+                        <TableColumn fx:id="columnaCodigo" prefWidth="53.0" text="Codigo" />
+                        <TableColumn fx:id="columnaNombre" prefWidth="65.0" text="Nombre" />
+                        <TableColumn fx:id="columnaValorUnitario" prefWidth="82.0" text="Valor Unitario" />
+                        <TableColumn fx:id="columnaCantidad" prefWidth="68.0" text="Cantidad" />
+                        <TableColumn fx:id="columnaFechaVencimiento" prefWidth="94.0" text="Fecha De Vencimiento" />
+                        <TableColumn fx:id="columnaCodigoAprob" prefWidth="84.0" text="Codigo Aprobacion" />
+                        <TableColumn fx:id="columnaTemperatura" prefWidth="73.0" text="Temperatura" />
+                        <TableColumn fx:id="columnaFechaDeEnva" prefWidth="83.0" text="Fecha De Enva" />
+                        <TableColumn fx:id="columnaPeso" prefWidth="64.0" text="Peso Envasado" />
+                        <TableColumn fx:id="columnaPaisOrigen" prefWidth="70.0" text="Pais Origen" />
+                     </columns>
+                  </TableColumn>
                </columns>
             </TableView>
          </children>
